@@ -2,11 +2,12 @@
 <html> 
 <head> 
  <meta charset="utf-8"> 
- <title>Budget App</title> 
+ <title>Budget App</title>
+ <link rel="stylesheet" href="style.css"> 
 </head> 
 <body> 
   
-    <h1 style="color:red;font-size:40px;">Dashboard</h1>       
+    <h1>Dashboard</h1>       
  
  
  <form method = "POST" action ="purchaseReport.php"> 

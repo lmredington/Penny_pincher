@@ -9,8 +9,7 @@ $query = ("SELECT * FROM income");
 $response = @mysqli_query($dbc, $query); 
 // If the query executed properly proceed 
 if($response){ 
-echo '<table align="left" 
-cellspacing="5" cellpadding="8"> 
+echo '<table class = "customTable"> 
 <tr> 
 <td align="left"><b>Amount</b></td> 
 <td align="left"><b>Date</b></td> 
@@ -37,6 +36,7 @@ mysqli_close($dbc);
 <head> 
  <meta charset="utf-8"> 
  <title>Go back to main menu</title> 
+ <link rel="stylesheet" href="style.css">
 </head> 
 <body>
  <form method = "POST" action ="dashboard.php"> 

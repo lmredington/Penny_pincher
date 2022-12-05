@@ -1,6 +1,7 @@
 <html> 
 <head> 
  <title>Add Purchase</title> 
+ <link rel="stylesheet" href="style.css">
 </head> 
 <body> 
  <?php 

@@ -1,6 +1,7 @@
 <html> 
 <head> 
  <title>Change Password</title> 
+ <link rel="stylesheet" href="style.css">
 </head> 
 <body> 
  <?php 

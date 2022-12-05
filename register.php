@@ -32,6 +32,7 @@ if(isset($_POST['login']))
 <html>
 <head>
 	<meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
 </head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}

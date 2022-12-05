@@ -11,8 +11,7 @@ $query = ("SELECT * FROM purchases WHERE MONTH(purchaseDate) = '$month' && YEAR(
 $response = @mysqli_query($dbc, $query); 
 // If the query executed properly proceed 
 if($response){ 
-echo '<table align="left" 
-cellspacing="5" cellpadding="8"> 
+echo '<table class = "customTable"> 
 <tr> 
 <td align="left"><b>purchaseDate</b></td> 
 <td align="left"><b>purchaseAmount</b></td> 
@@ -43,7 +42,8 @@ mysqli_close($dbc);
 <html> 
 <head> 
  <meta charset="utf-8"> 
- <title>Itemized List</title> 
+ <title>Itemized List</title>
+ <link rel="stylesheet" href="viewPur.css"> 
 </head> 
 <body>
  <form method = "POST" action ="dashboard.php"> 

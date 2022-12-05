@@ -41,6 +41,7 @@ if(isset($_POST['editProfile']))
 <html>
 <head>
 	<meta charset="utf-8">
+ <link rel="stylesheet" href="style.css">
 </head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -146,6 +147,11 @@ hr {
   display: table;
 }
 
+b{
+  color: #fff;
+
+}
+
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
@@ -173,25 +179,30 @@ hr {
 							</div>
 
 							<div class="form-group">
-								
-								<input class="form-control" placeholder="password" name="password" type="password" autofocus="" required="true">
+              <label for="username"><b>Password</b></label>
+								<input class="form-control" placeholder="Password" name="password" type="password" autofocus="" required="true">
 							</div>
 							
 							<div class="form-group">
+                <label for="username"><b>First Name</b></label>
 								<input class="form-control" placeholder="First Name" name="first_name" type="text" autofocus="" required="true">
 							</div>
 
 							<div class="form-group">
+              <label for="username"><b>Last Name</b></label>
 								<input class="form-control" placeholder="Last Name" name="last_name" type="text" autofocus="" required="true">
 							</div>
 
 							<div class="form-group">
+              <label for="username"><b>E-mail</b></label>
 								<input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="" required="true">
 							</div>
 
 							<div class="form-group">
+              <label for="username"><b>Phone</b></label>
 								<input class="form-control" placeholder="Phone" name="phone" type="phone" value="" required="true">
 							</div>
+
 							<div class="checkbox">
 								<button type="submit" value="editProfile" name="editProfile" action='index.php' class="btn btn-primary">Update</button><span style="padding-left:250px">
 							</div>

@@ -1,22 +1,24 @@
 <html> 
 <head> 
 <title>Add Income</title> 
+<link rel="stylesheet" href="style.css">
 </head> 
 <body> 
 <form action="http://localhost/budget/incomeadded.php" method="post"> 
 
-<b>Add Income</b> 
+<h1>Add Income</h1> 
 
-<p>Income Amount: 
+<p>Income Amount: </p> 
 <input type="int" name="incomeAmount" size="30" value="" /> 
-</p> 
 
-<p>Income Date: 
+
+<p>Income Date: </p> 
 <input type="date" name="incomeDate" size="30" value="" /> 
-</p> 
+
+<br> </br>
  
 <p> 
-<input type="submit" name="submit" value="Add Income" /> 
+<input type="submit" name="submit" value="Submit" /> 
 </p> 
 
 </form> 

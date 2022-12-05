@@ -1,28 +1,31 @@
 <html> 
 <head> 
-<title>Add Purchase</title> 
+<title>Add Purchase</title>
+<link rel="stylesheet" href="style.css">
 </head> 
 <body> 
 <form action="http://localhost/budget/purchaseadded.php" method="post"> 
 
-<b>Add a New Purchase</b> 
+<h1>Add a New Purchase</h1> 
 
-<p>Purchase Date: 
+<p>Purchase Date: </p> 
 <input type="date" name="purchaseDate" size="30" value="" /> 
-</p> 
 
-<p>Purchase Amount: 
+
+<p>Purchase Amount: </p> 
 <input type="number" step="0.01" name="purchaseAmount" size="30" value="" /> 
-</p> 
 
-<p>Category: 
+
+<p>Category: </p> 
 <input type="text" name="category" size="30" value="" /> 
-</p> 
 
-<p>Description: 
+
+<p>Description: </p> 
 <input type="text" name="description" size="30" value="" /> 
-</p> 
- 
+
+
+<br></br>
+
 <p> 
 <input type="submit" name="submit" value="Add Purchase" /> 
 </p> 

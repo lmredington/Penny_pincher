@@ -1,6 +1,7 @@
 <html> 
 <head> 
-<title>Purchase Report</title> 
+<title>Purchase Report</title>
+<link rel="stylesheet" href="style.css">
 </head> 
 <body> 
 

@@ -21,11 +21,12 @@ if(isset($_POST['login']))
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-			<h2 align="center">Budget App</h2>
-					<p style="font-size:16px; color:red" align="center"> 
+			<h2>Budget App</h2>
+					<p> 
 						<?php 
 						if (!empty($msg)){
 							echo $msg;
