@@ -36,7 +36,7 @@
 </select>
 
 <input type="submit" name="submit" value="View Itemized List" /> 
-
+  <input type = "submit" value="Go back to main menu"/>
 </form> 
 </body> 
 </html>
