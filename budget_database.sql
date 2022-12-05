@@ -50,7 +50,7 @@ INSERT INTO `categories` (`percent`, `description`) VALUES
 
 CREATE TABLE `income` (
 	`incomeID` int(11) NOT NULL AUTO_INCREMENT,
-  `incomeAmount` int(11) NOT NULL,
+  `incomeAmount` float(10,2) NOT NULL,
   `incomeDate` date NOT NULL, 
   `userID` int(11) NOT NULL, 
   PRIMARY KEY (incomeID)
