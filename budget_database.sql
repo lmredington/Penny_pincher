@@ -74,7 +74,7 @@ CREATE TABLE `purchases` (
   `purchaseID` int(11) NOT NULL AUTO_INCREMENT,
   `purchaseDate` date DEFAULT NULL,
   `purchaseAmount` float(10,2) DEFAULT NULL,
-  `category` varchar(20) NOT NULL,
+  `catID` int(11) NOT NULL,
   `description` varchar(20) NOT NULL, 
   `userID` int(11) NOT NULL, 
   PRIMARY KEY (purchaseID)
@@ -84,10 +84,10 @@ CREATE TABLE `purchases` (
 -- Dumping data for table `purchases`
 --
 
-INSERT INTO `purchases` (`purchaseDate`, `purchaseAmount`, `category`, `description`, `userID`) VALUES
-('2022-10-31', 37.5, 'Food', 'Applebees', 12),
-('2022-11-01', 2000, 'Rent', 'rent payment', 12),
-('2022-11-09', 186.78, 'Auto', 'Car Payment', 12);
+INSERT INTO `purchases` (`purchaseDate`, `purchaseAmount`, `catID`, `description`, `userID`) VALUES
+('2022-10-31', 37.5, 2, 'Applebees', 12),
+('2022-11-01', 2000, 1, 'rent payment', 12),
+('2022-11-09', 186.78, 1, 'Car Payment', 12);
 
 -- --------------------------------------------------------
 
