@@ -36,6 +36,11 @@
  <form method = "POST" action ="editProfile.php"> 
   <input type = "submit" value="Edit Profile"/> 
   </form>
+ 
+ <br></br>
+ <form method = "POST" action ="logout.php"> 
+  <input type = "submit" value="Logout"/> 
+  </form>
 
 </body> 
 </html>

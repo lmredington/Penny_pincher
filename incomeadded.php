@@ -5,6 +5,8 @@
 </head> 
 <body> 
  <?php 
+ session_start();
+ $uid = $_SESSION['userID'];
  if(isset($_POST['submit'])){ 
   $data_missing = array(); 
    
@@ -22,18 +24,20 @@
          // Trim white space from the name and store the name 
          $date = trim($_POST['incomeDate']); 
      } 
+
+     $userID = $uid;
  }
      
  
      if(empty($data_missing)){ 
          require_once('mysqli_connect.php'); 
-         $query = "INSERT INTO income (incomeAmount, incomeDate) VALUES (?, ?)"; 
+         $query = "INSERT INTO income (incomeAmount, incomeDate, userID) VALUES (?, ?, ?)"; 
          
          $stmt = mysqli_prepare($dbc, $query);
         
  
-         mysqli_stmt_bind_param($stmt, "ss", $amount, 
-                                $date); 
+         mysqli_stmt_bind_param($stmt, "sss", $amount, 
+                                $date, $userID); 
  
  
          mysqli_stmt_execute($stmt); 

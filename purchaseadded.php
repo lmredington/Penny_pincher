@@ -5,6 +5,8 @@
 </head> 
 <body> 
  <?php 
+ session_start();
+ $uid = $_SESSION['userID'];
  if(isset($_POST['submit'])){ 
   $data_missing = array(); 
    
@@ -36,19 +38,20 @@
          // Trim white space from the name and store the name 
          $pdesc = trim($_POST['description']); 
      } 
+     // $puid = $_POST['uid'];
  }
      
  
      if(empty($data_missing)){ 
          require_once('mysqli_connect.php'); 
          $query = "INSERT INTO purchases (purchaseDate, purchaseAmount, 
-         category, description) VALUES (?, ?, ?, ?)"; 
+         catID, description, userID) VALUES (?, ?, ?, ?, ?)"; 
          
          $stmt = mysqli_prepare($dbc, $query);
         
  
-         mysqli_stmt_bind_param($stmt, "ssss", $pdate, 
-                                $pamt, $pcat, $pdesc); 
+         mysqli_stmt_bind_param($stmt, "sssss", $pdate, 
+                                $pamt, $pcat, $pdesc, $uid); 
  
  
          mysqli_stmt_execute($stmt); 

@@ -1,3 +1,5 @@
+session_start();
+
 <html> 
 <head> 
 <title>Purchase Report</title>

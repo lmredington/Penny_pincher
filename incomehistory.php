@@ -1,9 +1,11 @@
 <?php 
 // Get a connection for the database 
+session_start();
+$uid = $_SESSION['userID'];
 require_once('mysqli_connect.php'); 
 // Create a query for the database 
 
-$query = ("SELECT * FROM income");
+$query = ("SELECT * FROM income WHERE userID = $uid");
 // Get a response from the database by sending the connection 
 // and the query 
 $response = @mysqli_query($dbc, $query); 

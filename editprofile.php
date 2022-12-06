@@ -11,7 +11,7 @@ if(isset($_POST['editProfile']))
     $email=($_POST['email']);
     $phone=($_POST['phone']);
 	
-	$query=mysqli_query($dbc,"UPDATE users SET password ='$new_pass' where userID='$email'");
+	$query=mysqli_query($dbc,"UPDATE users SET password ='$password' where userID='$email'");
     $ret=mysqli_fetch_array($query);
     if($ret>0){
       $msg = 'Password Updated';

@@ -1,11 +1,13 @@
 <?php 
 // Get a connection for the database 
+session_start();
 require_once('mysqli_connect.php'); 
 // Create a query for the database 
 
+$uid = $_SESSION['userID'];
 $month = $_GET['month'];
 $year = $_GET['year'];
-$query = ("SELECT * FROM purchases WHERE MONTH(purchaseDate) = '$month' && YEAR(purchaseDate) = '$year' ORDER BY purchaseDate");
+$query = ("SELECT * FROM purchases WHERE MONTH(purchaseDate) = '$month' && YEAR(purchaseDate) = '$year' && userID = '$uid' ORDER BY purchaseDate");
 // Get a response from the database by sending the connection 
 // and the query 
 $response = @mysqli_query($dbc, $query); 
