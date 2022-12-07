@@ -7,9 +7,17 @@
 </head> 
 <body> 
   
-    <h1>Dashboard</h1>       
+    <h1>Dashboard</h1>
+    <br> </br>
  
- 
+  <?php 
+ session_start();
+
+ $_SESSION['balance'];
+ echo "Account Balance: $ {$_SESSION['balance']}";
+ ?>
+ <br> </br>
+
  <form method = "POST" action ="purchaseReport.php"> 
   <input type = "submit" value="View Purchases"/> 
  </form> 

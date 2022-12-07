@@ -6,6 +6,7 @@
 <body> 
  <?php 
  session_start();
+ $_SESSION['balance'];
  $uid = $_SESSION['userID'];
  if(isset($_POST['submit'])){ 
   $data_missing = array(); 
@@ -58,7 +59,7 @@
              echo "$missing<br />"; 
          } 
      } 
- 
+     $_SESSION['balance'] += $amount
  ?>
  
  

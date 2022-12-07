@@ -6,6 +6,7 @@
 <body> 
  <?php 
  session_start();
+ $_SESSION['balance'];
  $uid = $_SESSION['userID'];
  if(isset($_POST['submit'])){ 
   $data_missing = array(); 
@@ -43,16 +44,14 @@
      
  
      if(empty($data_missing)){ 
-         require_once('mysqli_connect.php'); 
-         $query = "INSERT INTO purchases (purchaseDate, purchaseAmount, 
+        require_once('mysqli_connect.php');
+        $query = "INSERT INTO purchases (purchaseDate, purchaseAmount, 
          catID, description, userID) VALUES (?, ?, ?, ?, ?)"; 
-         
-         $stmt = mysqli_prepare($dbc, $query);
-        
- 
+
+        $stmt = mysqli_prepare($dbc, $query);
          mysqli_stmt_bind_param($stmt, "sssss", $pdate, 
                                 $pamt, $pcat, $pdesc, $uid); 
- 
+
  
          mysqli_stmt_execute($stmt); 
          $affected_rows = mysqli_stmt_affected_rows($stmt); 
@@ -72,6 +71,8 @@
              echo "$missing<br />"; 
          } 
      } 
+
+     $_SESSION['balance'] -= $pamt
  
  ?>
  
