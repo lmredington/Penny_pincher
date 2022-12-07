@@ -9,14 +9,7 @@
   
     <h1>Dashboard</h1>
     <br> </br>
- 
-  <?php 
- session_start();
 
- if (isset($_SESSION['balance'])){
-  echo "Account Balance: $ {$_SESSION['balance']}";
-}
- ?>
  <br> </br>
 
  <form method = "POST" action ="purchaseReport.php"> 
