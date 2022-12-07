@@ -13,8 +13,9 @@
   <?php 
  session_start();
 
- $_SESSION['balance'];
- echo "Account Balance: $ {$_SESSION['balance']}";
+ if (isset($_SESSION['balance'])){
+  echo "Account Balance: $ {$_SESSION['balance']}";
+}
  ?>
  <br> </br>
 
