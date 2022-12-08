@@ -1,0 +1,48 @@
+body{
+    background: linear-gradient(to right,#196BCA ,#6433E0);
+    font-family: Arial;
+    color: #fff;
+
+}
+
+input {
+    background: #fff;
+    color: #196BCA;
+    font-family: Arial;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px 15px;
+    border: 0px solid #000;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+table.customTable {
+    width: 80%;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #196BCA;
+    border-style: solid;
+    border-radius: 0px;
+    color: #196BCA;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  
+  table.customTable td, table.customTable th {
+    border-width: 2px;
+    border-color: #196BCA;
+    border-style: solid;
+    border-radius: 0px;
+    padding: 5px;
+    
+  }
+
+  
