@@ -46,7 +46,7 @@ html>
      if(empty($data_missing)){ 
         require_once('mysqli_connect.php');
         $query = "INSERT INTO purchases (purchaseDate, purchaseAmount, 
-         catID, description, userID) VALUES (?, ?, ?, ?, ?)"; 
+         catID, catDescription, userID) VALUES (?, ?, ?, ?, ?)"; 
 
         $stmt = mysqli_prepare($dbc, $query);
          mysqli_stmt_bind_param($stmt, "sssss", $pdate, 
