@@ -1,4 +1,4 @@
-html> 
+<html> 
 <!-- add new purchase to database -->
 <head> 
  <title>Add Purchase</title> 
@@ -32,12 +32,12 @@ html>
          // Trim white space from the name and store the name 
          $pcat = trim($_POST['category']); 
      } 
-     if(empty($_POST['description'])){ 
+     if(empty($_POST['purchDescription'])){ 
          // Adds name to array 
-         $data_missing[] = 'description'; 
+         $data_missing[] = 'purchDescription'; 
      } else { 
          // Trim white space from the name and store the name 
-         $pdesc = trim($_POST['description']); 
+         $pdesc = trim($_POST['purchDescription']); 
      } 
      // $puid = $_POST['uid'];
  }
@@ -46,7 +46,7 @@ html>
      if(empty($data_missing)){ 
         require_once('mysqli_connect.php');
         $query = "INSERT INTO purchases (purchaseDate, purchaseAmount, 
-         catID, catDescription, userID) VALUES (?, ?, ?, ?, ?)"; 
+         catID, purchDescription, userID) VALUES (?, ?, ?, ?, ?)"; 
 
         $stmt = mysqli_prepare($dbc, $query);
          mysqli_stmt_bind_param($stmt, "sssss", $pdate, 
