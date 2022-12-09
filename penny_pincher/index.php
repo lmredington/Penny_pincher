@@ -1,3 +1,6 @@
+# functions as login page
+# can forward to 'registration page', creating a new account
+# can forward to 'forgot password' page, create new password
 <?php
 session_start();
 require_once('mysqli_connect.php'); 
