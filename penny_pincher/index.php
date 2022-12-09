@@ -1,5 +1,5 @@
 <?php
-#functions as login page
+# functions as login page
 # can forward to 'registration page', creating a new account
 # can forward to 'forgot password' page, create new password
 session_start();
