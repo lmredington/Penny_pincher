@@ -4,10 +4,10 @@
 <link rel="stylesheet" href="style.css">
 </head> 
 <body> 
-<form action="http://localhost/budget/incomeadded.php" method="post"> 
+<form action="http://localhost/penny_pincher/incomeadded.php" method="post"> 
 
 <h1>Add Income</h1> 
-
+<br>
 <p>Income Amount: </p> 
 <input type="int" name="incomeAmount" size="30" value="" /> 
 
