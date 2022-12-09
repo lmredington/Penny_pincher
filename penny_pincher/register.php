@@ -1,4 +1,5 @@
 <?php
+# register(register) new account
 session_start();
 require_once('mysqli_connect.php'); 
 
@@ -148,7 +149,7 @@ hr {
 
 <body>
 
-			<h2 align="center">Budget App</h2>
+			<h2 align="center">Penny Pincher</h2>
 					<p style="font-size:16px; color:red" align="center"> 
 						<?php 
 						if (!empty($msg)){
@@ -160,13 +161,13 @@ hr {
 						<fieldset>
 
 							<div class="form-group">
-								<label for="username"><b>Username</b></label>
+								<label for="username"><b>Registration</b></label>
 								<input class="form-control" placeholder="Username" name="username" type="text" autofocus="" required="true">
 							</div>
 
 							<div class="form-group">
 								
-								<input class="form-control" placeholder="password" name="password" type="password" autofocus="" required="true">
+								<input class="form-control" placeholder="Password" name="password" type="password" autofocus="" required="true">
 							</div>
 							
 							
