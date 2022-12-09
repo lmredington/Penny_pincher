@@ -30,14 +30,14 @@ SET time_zone = "+00:00";
 CREATE TABLE `categories` (
   `catID` int(11) NOT NULL AUTO_INCREMENT,
   `percent` DECIMAL(10,5) NOT NULL,
-  `description` varchar(50) NOT NULL, 
+  `catDescription` varchar(50) NOT NULL, 
   PRIMARY KEY (catID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `categories`
 --
-INSERT INTO `categories` (`percent`, `description`) VALUES
+INSERT INTO `categories` (`percent`, `catDescription`) VALUES
 (0.7, 'essentials'), 
 (0.15, 'personal'), 
 (0.15, 'savings');
@@ -75,7 +75,7 @@ CREATE TABLE `purchases` (
   `purchaseDate` date DEFAULT NULL,
   `purchaseAmount` float(10,2) DEFAULT NULL,
   `catID` int(11) NOT NULL,
-  `description` varchar(20) NOT NULL, 
+  `purchDescription` varchar(20) NOT NULL, 
   `userID` int(11) NOT NULL, 
   PRIMARY KEY (purchaseID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -84,7 +84,7 @@ CREATE TABLE `purchases` (
 -- Dumping data for table `purchases`
 --
 
-INSERT INTO `purchases` (`purchaseDate`, `purchaseAmount`, `catID`, `description`, `userID`) VALUES
+INSERT INTO `purchases` (`purchaseDate`, `purchaseAmount`, `catID`, `purchDescription`, `userID`) VALUES
 ('2022-10-31', 37.5, 2, 'Applebees', 12),
 ('2022-11-01', 2000, 1, 'rent payment', 12),
 ('2022-11-09', 186.78, 1, 'Car Payment', 12);
