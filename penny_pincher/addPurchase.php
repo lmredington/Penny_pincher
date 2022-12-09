@@ -1,5 +1,4 @@
 <html> 
-<html> 
 <!-- Input information to create new purchase -->
 <head> 
 <title>Add Purchase</title>
@@ -24,7 +23,7 @@
 
 
 <p>Description: </p> 
-<input type="text" name="description" size="30" value="" /> 
+<input type="text" name="purchDescription" size="30" value="" /> 
 
 
 <br></br>
@@ -32,6 +31,15 @@
 <p> 
 <input type="submit" name="submit" value="Add Purchase" /> 
 </p> 
+
+</form> 
+</body> 
+</html>
+
+<form method = "POST" action ="dashboard.php"> 
+  <input type = "submit" value="Go back to main menu"/> 
+ </form>
+
 
 </form> 
 </body> 
