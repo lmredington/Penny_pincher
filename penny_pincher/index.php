@@ -28,7 +28,7 @@ if(isset($_POST['login']))
 </head>
 <body>
 
-			<h2>Budget App</h2>
+			<h2>Penny Pincher</h2>
 					<p> 
 						<?php 
 						if (!empty($msg)){
