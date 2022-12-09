@@ -7,7 +7,7 @@ require_once('mysqli_connect.php');
 $uid = $_SESSION['userID'];
 $month = $_GET['month'];
 $year = $_GET['year'];
-$query = ("SELECT * FROM purchases WHERE MONTH(purchaseDate) = '$month' && YEAR(purchaseDate) = '$year' && userID = '$uid' ORDER BY purchaseDate");
+$query = ("SELECT * FROM purchases p left join categories c on p.catID=c.catID WHERE MONTH(purchaseDate) = '$month' && YEAR(purchaseDate) = '$year' && userID = '$uid' ORDER BY purchaseDate");
 // Get a response from the database by sending the connection 
 // and the query 
 $response = @mysqli_query($dbc, $query); 
@@ -15,10 +15,10 @@ $response = @mysqli_query($dbc, $query);
 if($response){ 
 echo '<table class = "customTable"> 
 <tr> 
-<td align="left"><b>purchaseDate</b></td> 
-<td align="left"><b>purchaseAmount</b></td> 
-<td align="left"><b>category</b></td> 
-<td align="left"><b>description</b></td>  
+<td align="left"><b>Purchase Date</b></td> 
+<td align="left"><b>Purchase Amount</b></td> 
+<td align="left"><b>Category</b></td> 
+<td align="left"><b>Purchase Description</b></td>  
 </tr>'; 
 // mysqli_fetch_array will return a row of data from the query 
 // until no further data is available 
@@ -26,8 +26,8 @@ while($row = mysqli_fetch_array($response)){
 echo '<tr><td align="left">' . 
 $row['purchaseDate'] . '</td><td align="left">' . 
 $row['purchaseAmount'] . '</td><td align="left">' . 
-$row['category'] . '</td><td align="left">' . 
-$row['description'] . '</td><td align="left">'
+$row['catDescription'] . '</td><td align="left">' . 
+$row['purchDescription'] . '</td><td align="left">'
 ; 
 echo '</tr>'; 
 } 
