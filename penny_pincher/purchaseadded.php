@@ -1,4 +1,5 @@
-<html> 
+html> 
+<!-- add new purchase to database -->
 <head> 
  <title>Add Purchase</title> 
  <link rel="stylesheet" href="style.css">
