@@ -24,3 +24,7 @@
 </form> 
 </body> 
 </html>
+
+<form method = "POST" action ="dashboard.php"> 
+  <input type = "submit" value="Go back to main menu"/> 
+ </form>
